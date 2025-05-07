@@ -59,6 +59,43 @@
     .leaflet-container {
       background: #0f172a !important;
     }
+    .message-item {
+  animation: fadeIn 0.5s ease-out;
+  transition: all 0.3s ease;
+}
+
+.message-item:hover {
+  transform: translateX(2px);
+  border-left-color: #22d3ee;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi untuk notifikasi baru */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(34, 211, 238, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0);
+  }
+}
+
+.new-message {
+  animation: pulseGlow 1.5s infinite;
+}
   </style>
 </head>
 <body>
@@ -81,10 +118,38 @@
         </div>
     </div>
     
-   <div id="message" class="alert alert-info mt-4"></div>
-        <h2 class="text-xl font-bold text-white mb-4">Pesan dari Server</h2>
-        <p id="messageContent" class="text-gray-300">Tidak ada pesan baru.</p>
+<div class="glass-card rounded-xl p-5 mb-6">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+    </svg>
+    NOTIFIKASI SERVER
+  </h2>
+  
+  <div id="serverMessage" class="relative">
+    <!-- Default state when no messages -->
+    <div class="flex flex-col items-center justify-center py-8 text-center" id="emptyMessage">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-500 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+      </svg>
+      <p class="text-gray-400 font-medium">Tidak ada pesan baru</p>
+      <p class="text-gray-500 text-sm mt-1">Server akan mengirim notifikasi di sini</p>
     </div>
+    
+    <!-- Template for message (hidden by default) -->
+    <div id="messageTemplate" class="hidden">
+      <div class="message-item bg-gradient-to-r from-slate-800/50 to-slate-800/30 border-l-4 border-cyan-500 rounded-r-lg p-4 mb-3 shadow-lg">
+        <div class="flex justify-between items-start">
+          <div>
+            <p class="font-bold text-cyan-400 text-sm">PEMBARUAN DATA</p>
+            <p class="text-white mt-1" data-content="text">Pesan dari server akan muncul di sini</p>
+          </div>
+          <span class="text-xs text-gray-500" data-content="time">Baru saja</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div class="lg:col-span-2 space-y-6">
