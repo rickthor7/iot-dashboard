@@ -12,30 +12,30 @@ DASHBOARD GEMPA adalah dasbor pemantauan gempa bumi real-time yang komprehensif,
  * Frontend: HTML, CSS, JavaScript, Tailwind CSS, Leaflet.js untuk peta interaktif.
  * Backend: Node.js dengan Express.js untuk logika sisi server.
  * Komunikasi Real-time: Socket.IO untuk komunikasi dua arah berbasis WebSocket antara klien dan server.
- * [cite_start] Database: MySQL untuk menyimpan data seismik, peringatan, dan informasi pengguna.
- * [cite_start] Penerimaan Data: MQTT (menggunakan broker EMQ X) untuk berlangganan topik peringatan gempa, pembaruan magnitudo, dan detak jantung.
- * [cite_start] Lingkungan Pengembangan Lokal: Laragon untuk lingkungan pengembangan yang portabel, terisolasi, dan cepat.
+ * Database: MySQL untuk menyimpan data seismik, peringatan, dan informasi pengguna.
+ * Penerimaan Data: MQTT (menggunakan broker EMQ X) untuk berlangganan topik peringatan gempa, pembaruan magnitudo, dan detak jantung.
+ * Lingkungan Pengembangan Lokal: Laragon untuk lingkungan pengembangan yang portabel, terisolasi, dan cepat.
 ## 🚀 Memulai
 Untuk menjalankan salinan lokal, ikuti langkah-langkah sederhana berikut.
 Prasyarat
- * Laragon: Disarankan menggunakan Laragon untuk pengaturan yang mudah. [cite_start]Anda dapat mengunduhnya secara gratis.
+ * Laragon: Disarankan menggunakan Laragon untuk pengaturan yang mudah. Anda dapat mengunduhnya secara gratis.
  * Node.js: Pastikan Anda telah menginstal Node.js untuk menjalankan server backend.
  * Git: Untuk melakukan clone repositori.
 Instalasi & Pengaturan
- * [cite_start]Mulai Laragon: Jalankan Laragon dan mulai semua layanan (Apache, MySQL).
+ * Mulai Laragon: Jalankan Laragon dan mulai semua layanan (Apache, MySQL).
  * Pengaturan Database:
    * Buka phpMyAdmin melalui dasbor Laragon.
-   * [cite_start]Buat basis data baru bernama datajam.
-   * [cite_start]Pastikan tabel-tabel yang diperlukan seperti alerts, magnitude, dan heartbeat rate telah dibuat agar sesuai dengan nama di MQTT.
+   * Buat basis data baru bernama datajam.
+   * Pastikan tabel-tabel yang diperlukan seperti alerts, magnitude, dan heartbeat rate telah dibuat agar sesuai dengan nama di MQTT.
  * Clone Repositori:
    * Arahkan ke direktori www Laragon (biasanya C:\laragon\www).
    * Clone repositori proyek:
-     git clone https://github.com/rickthor7/iot-dashboard dashboard-iot
+     git clone https://github.com/rickthor7/iot-dashboard.git
 
  * Konfigurasi MQTT:
-   * [cite_start]Aplikasi ini menggunakan mqtt://broker.emqx.io sebagai broker MQTT.
-   * [cite_start]Server akan berlangganan (subscribe) ke topik-topik berikut:
-     * [cite_start]earthquake/alerts
+   * Aplikasi ini menggunakan mqtt://broker.emqx.io sebagai broker MQTT.
+   * Server akan berlangganan (subscribe) ke topik-topik berikut:
+     * earthquake/alerts
      * [cite_start]earthquake/magnitude
      * [cite_start]heartbeat/rate
    * Konfigurasi ini sudah diatur sebelumnya dalam file fix.js.
