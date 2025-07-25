@@ -8,14 +8,14 @@ DASHBOARD GEMPA adalah dasbor pemantauan gempa bumi real-time yang komprehensif,
  * Notifikasi Server: Panel khusus untuk pembaruan dan peringatan real-time dari server, memastikan pengguna selalu terinformasi.
  * Data Pengguna Rescue Watch: Tabel khusus untuk memantau status individu yang dilengkapi dengan perangkat Rescue Watch, termasuk status SOS, detak jantung, kadar SpO2, tekanan darah, dan lokasi terakhir yang diketahui.
  * Desain Responsif: Antarmuka modern dan intuitif yang dibangun dengan Tailwind CSS untuk pengalaman yang mulus di berbagai perangkat.
-## 🛠 Tumpukan Teknologi
+## 🛠 Teknologi yang Digunakan
  * Frontend: HTML, CSS, JavaScript, Tailwind CSS, Leaflet.js untuk peta interaktif.
  * Backend: Node.js dengan Express.js untuk logika sisi server.
  * Komunikasi Real-time: Socket.IO untuk komunikasi dua arah berbasis WebSocket antara klien dan server.
  * Database: MySQL untuk menyimpan data seismik, peringatan, dan informasi pengguna.
  * Penerimaan Data: MQTT (menggunakan broker EMQ X) untuk berlangganan topik peringatan gempa, pembaruan magnitudo, dan detak jantung.
  * Lingkungan Pengembangan Lokal: Laragon untuk lingkungan pengembangan yang portabel, terisolasi, dan cepat.
-## 🚀 Memulai
+## 🚀 Start
 Untuk menjalankan salinan lokal, ikuti langkah-langkah sederhana berikut.
 Prasyarat
  * Laragon: Disarankan menggunakan Laragon untuk pengaturan yang mudah. Anda dapat mengunduhnya secara gratis.
@@ -28,7 +28,7 @@ Instalasi & Pengaturan
    * Buat basis data baru bernama datajam.
    * Pastikan tabel-tabel yang diperlukan seperti alerts, magnitude, dan heartbeat rate telah dibuat agar sesuai dengan nama di MQTT.
  * Clone Repositori:
-   * Arahkan ke direktori www Laragon (biasanya C:\laragon\www).
+   * Arahkan ke direktori www Laragon (umume C:\laragon\www).
    * Clone repositori proyek:
      git clone https://github.com/rickthor7/iot-dashboard.git
 
@@ -36,23 +36,21 @@ Instalasi & Pengaturan
    * Aplikasi ini menggunakan mqtt://broker.emqx.io sebagai broker MQTT.
    * Server akan berlangganan (subscribe) ke topik-topik berikut:
      * earthquake/alerts
-     * [cite_start]earthquake/magnitude
-     * [cite_start]heartbeat/rate
+     * earthquake/magnitude
+     * heartbeat/rate
    * Konfigurasi ini sudah diatur sebelumnya dalam file fix.js.
  * Jalankan Server Backend:
-   * [cite_start]Buka Terminal Laragon.
+   * Buka Terminal Laragon.
    * Arahkan ke direktori proyek:
      cd dashboard-iot
 
-     [cite_start]
    * Instal paket npm yang diperlukan:
      npm install
 
    * Mulai server Node.js:
      node fix.js
 
-     [cite_start]
-   * [cite_start]Anda akan melihat log di konsol yang mengonfirmasi koneksi basis data dan subscription topik MQTT berhasil.
+   * Anda akan melihat log di konsol yang mengonfirmasi koneksi basis data dan subscription topik MQTT berhasil.
 ## Penggunaan
  * Setelah server berjalan, Anda dapat mengakses dasbor di peramban web Anda dengan membuka:
-   [cite_start]http://localhost:3002
+   http://localhost:3002(port kembali ke masing masing)
