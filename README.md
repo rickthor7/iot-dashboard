@@ -28,9 +28,9 @@ Instalasi & Pengaturan
    * Buat basis data baru bernama datajam.
    * Pastikan tabel-tabel yang diperlukan seperti alerts, magnitude, dan heartbeat rate telah dibuat agar sesuai dengan nama di MQTT.
  * Clone Repositori:
-   * Arahkan ke direktori www Laragon (umume C:\laragon\www).
+   * Arahkan ke direktori www Laragon (umumy C:\laragon\www).
    * Clone repositori proyek:
-     git clone https://github.com/rickthor7/iot-dashboard.git
+     'git clone https://github.com/rickthor7/iot-dashboard.git'
 <img width="602" height="145" alt="image" src="https://github.com/user-attachments/assets/ed727cc9-8475-4610-bd22-55493deff0bd" />
 <blockquote> config mqtt pake broker dan topics yang dibuat </blockquote>
  * Konfigurasi MQTT:
@@ -40,20 +40,20 @@ Instalasi & Pengaturan
      * earthquake/magnitude
      * heartbeat/rate
    * Konfigurasi ini sudah diatur sebelumnya dalam file fix.js.
-<img width="602" height="277" alt="image" src="https://github.com/user-attachments/assets/716c6ea4-c6f6-413e-ba31-9c6475429c1a" />
+<img width="602" height="277" alt="image" src="https://github.com/user-attachments/assets/716c6ea4-c6f6-413e-ba31-9c6475429c1a" /> <br>
 <blockquote> Untuk menyambung mqtt, output untuk menandakan mqtt </blockquote>
-<img width="602" height="290" alt="image" src="https://github.com/user-attachments/assets/2e5ad6f8-b96a-47d8-9169-e83faff7ffd9" />
+<img width="602" height="290" alt="image" src="https://github.com/user-attachments/assets/2e5ad6f8-b96a-47d8-9169-e83faff7ffd9" /> <br>
 <blockquote> MQTT </blockquote>
  * Jalankan Server Backend:
    * Buka Terminal Laragon.
-<img width="602" height="396" alt="image" src="https://github.com/user-attachments/assets/7659a4fe-2200-44e0-a32f-14acf3069620" />
+<img width="602" height="396" alt="image" src="https://github.com/user-attachments/assets/7659a4fe-2200-44e0-a32f-14acf3069620" /> <br>
   <blockquote> Laragon </blockquote>
    * Arahkan ke direktori proyek:
-     cd dashboard-iot
+     'cd dashboard-iot'
    * Instal paket npm yang diperlukan:
-     npm install
+     'npm install'
    * Mulai server Node.js:
-     node fix.js
+     'node fix.js'
 <img width="602" height="339" alt="image" src="https://github.com/user-attachments/assets/22b2bac4-34fb-42af-b657-09c66836ddb0" />
    * Anda akan melihat log di konsol yang mengonfirmasi koneksi basis data dan subscription topik MQTT berhasil.
   * MYSQL
