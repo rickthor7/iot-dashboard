@@ -31,7 +31,8 @@ Instalasi & Pengaturan
    * Arahkan ke direktori www Laragon (umume C:\laragon\www).
    * Clone repositori proyek:
      git clone https://github.com/rickthor7/iot-dashboard.git
-
+<img width="602" height="145" alt="image" src="https://github.com/user-attachments/assets/ed727cc9-8475-4610-bd22-55493deff0bd" />
+<blockquote> config mqtt pake broker dan topics yang dibuat </blockquote>
  * Konfigurasi MQTT:
    * Aplikasi ini menggunakan mqtt://broker.emqx.io sebagai broker MQTT.
    * Server akan berlangganan (subscribe) ke topik-topik berikut:
@@ -39,18 +40,25 @@ Instalasi & Pengaturan
      * earthquake/magnitude
      * heartbeat/rate
    * Konfigurasi ini sudah diatur sebelumnya dalam file fix.js.
+<img width="602" height="277" alt="image" src="https://github.com/user-attachments/assets/716c6ea4-c6f6-413e-ba31-9c6475429c1a" />
+<blockquote> Untuk menyambung mqtt, output untuk menandakan mqtt </blockquote>
+<img width="602" height="290" alt="image" src="https://github.com/user-attachments/assets/2e5ad6f8-b96a-47d8-9169-e83faff7ffd9" />
+<blockquote> MQTT </blockquote>
  * Jalankan Server Backend:
    * Buka Terminal Laragon.
+<img width="602" height="396" alt="image" src="https://github.com/user-attachments/assets/7659a4fe-2200-44e0-a32f-14acf3069620" />
+  <blockquote> Laragon </blockquote>
    * Arahkan ke direktori proyek:
      cd dashboard-iot
-
    * Instal paket npm yang diperlukan:
      npm install
-
    * Mulai server Node.js:
      node fix.js
-
+<img width="602" height="339" alt="image" src="https://github.com/user-attachments/assets/22b2bac4-34fb-42af-b657-09c66836ddb0" />
    * Anda akan melihat log di konsol yang mengonfirmasi koneksi basis data dan subscription topik MQTT berhasil.
+  * MYSQL
+  <img width="602" height="339" alt="image" src="https://github.com/user-attachments/assets/0877a78f-5c62-4ea8-9386-42878caaa547" />
+<blockquote> Nama di mySql sama dengan nama di MQTT </blockquote>
 ## Penggunaan
  * Setelah server berjalan, Anda dapat mengakses dasbor di peramban web Anda dengan membuka:
-   http://localhost:3002(port kembali ke masing masing)
+   http://localhost:3002(port)
