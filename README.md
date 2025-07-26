@@ -1,4 +1,5 @@
 # DASHBOARD GEMPA: Sistem Peringatan dan Pemantauan Gempa Real-Time
+<img width="1366" height="691" alt="image" src="https://github.com/user-attachments/assets/f3f070cb-24e7-41dc-9372-656609aaf0e6" />
 ### 🚨 Gambaran program
 DASHBOARD GEMPA adalah dasbor pemantauan gempa bumi real-time yang komprehensif, dirancang untuk menyediakan data seismik terkini, notifikasi server, dan informasi vital untuk keselamatan pengguna. Sistem ini mengintegrasikan data dari berbagai sumber untuk menyajikan gambaran aktivitas seismik yang jelas dan instan, menjadikannya alat penting untuk pemantauan dan respons. Dasbor ini dilengkapi dengan peta seismik interaktif, daftar gempa terkini dan signifikan, serta bagian pemantauan untuk pengguna dengan perangkat "Rescue Watch", yang menampilkan lokasi dan tanda-tanda vital mereka.
 ## ✨ Fitur Utama
